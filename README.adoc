@@ -4,31 +4,25 @@ Using the imgflip api, this project was developed with JAVA(VERTX) to generate m
 
 == Updates
 
-[source]
 ----
-Change font type
-----
-
-[source]
-----
-Change font size
-
-[source]
-----
-Upload custom image
+-Change font type
 ----
 
-[source]
 ----
-Create user module
+-Change font size
+
+----
+-Upload custom image
 ----
 
-[source]
 ----
-Add favorite module
+-Create user module
 ----
 
-[source]
 ----
-Add meme to favorite
+-Add favorite module
+----
+
+----
+-Add meme to favorite
 ----
