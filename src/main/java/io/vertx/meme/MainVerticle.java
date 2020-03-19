@@ -63,21 +63,29 @@ public class MainVerticle extends AbstractVerticle {
 
         templateEngine = FreeMarkerTemplateEngine.create(vertx);
         int port;
-        if (System.getenv("PORT").isEmpty()){
-            port = 8080;
-        }  else port = Integer.parseInt(System.getenv("PORT"));
-
-        server
-        .requestHandler(router)
-        .listen(port, ar -> {
-            if (ar.succeeded()) {
-            System.out.println("HTTP server running on port "+port);
-            promise.complete();
-            } else {
-            System.out.println("Could not start a HTTP server: "+ ar.cause().getMessage());
-            promise.fail(ar.cause().getMessage());
-            }
-        });
+        if (System.getProperty("PORT").isEmpty() || System.getProperty("PORT") == null){
+            server
+            .requestHandler(router)
+            .listen(8080, ar -> {
+                if (ar.succeeded()) {
+                System.out.println("HTTP server running on port "+8080);
+                promise.complete();
+                } else {
+                System.out.println("Could not start a HTTP server: "+ ar.cause().getMessage());
+                promise.fail(ar.cause().getMessage());
+                }
+            });
+        }  else  server
+            .requestHandler(router)
+            .listen(Integer.parseInt(System.getProperty("PORT")), ar -> {
+                if (ar.succeeded()) {
+                System.out.println("HTTP server running on port "+Integer.parseInt(System.getProperty("PORT")));
+                promise.complete();
+                } else {
+                System.out.println("Could not start a HTTP server: "+ ar.cause().getMessage());
+                promise.fail(ar.cause().getMessage());
+                }
+            });
 
         return promise.future();
     }
