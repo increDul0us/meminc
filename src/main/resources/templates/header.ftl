@@ -53,7 +53,7 @@
           <div class="col-6 col-xl-2" data-aos="fade-down">
             <h1 class="mb-0 navbar-translate">
                 <a href="/" class="navbar-brand text-black h2 mb-0">
-                    <img width="70px" src="assets/images/favicon.png" alt="Image" class="img-fluid">Meminc
+                    <img width="70px" src="/assets/images/favicon.png" alt="Image" class="img-fluid">Meminc
                 </a>
             </h1>
           </div>
