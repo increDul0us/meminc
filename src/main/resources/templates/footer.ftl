@@ -3,7 +3,7 @@
                 <div class="container-fluid">
                     <p>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script data-cfasync="false" src="/assets/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://github.com/incredul0us" target="_blank" >incredulous</a>
+                    Copyright &copy;<script data-cfasync="false"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://github.com/incredul0us" target="_blank" >incredulous</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>

@@ -8,7 +8,7 @@
                         <div class="image-wrap">
                             <div class="image-info">
                             <h2 class="mb-3">${meme.name}</h2>
-                            <a href="add/${meme.id}" class="btn btn-outline-white py-2 px-4">Meminc This</a>
+                            <a href="/create/${meme.id}" class="btn btn-outline-white py-2 px-4">Meminc This</a>
                             </div>
                             <img src="${meme.url}" alt="Image">
                         </div>

@@ -25,6 +25,7 @@ import java.util.Random;
 import java.util.Set;
 
 public class MainVerticle extends AbstractVerticle {
+
     private FreeMarkerTemplateEngine templateEngine;
 
     @Override
@@ -52,8 +53,8 @@ public class MainVerticle extends AbstractVerticle {
         router.get("/").handler(this::indexHandler);
         router.get("/memes").handler(this::getMemeHandler);
         router.get("/about").handler(this::aboutHandler);
-        router.get("/add").handler(this::addMemeHandler);
-        router.get("/add/:id").handler(this::addMemeHandler);
+        router.get("/create").handler(this::addMemeHandler);
+        router.get("/create/:id").handler(this::addMemeHandler);
         router.post().handler(BodyHandler.create());
         // router.post("/add").handler(BodyHandler.create()
         // .setUploadsDirectory("file-uploads"));
@@ -98,6 +99,7 @@ public class MainVerticle extends AbstractVerticle {
                 JsonObject data = body.getJsonObject("data");
                 JsonArray memes = data.getJsonArray("memes");
                 context.put("memes", memes.getList());
+                context.put("title", "home");
                 templateEngine.render(context.data(), "templates/index.ftl", result -> {
                   if (result.succeeded()) {
                     context.response().putHeader("Content-Type", "text/html");
@@ -133,6 +135,7 @@ public class MainVerticle extends AbstractVerticle {
         //         JsonObject body = response.bodyAsJsonObject();
         //         JsonArray memes = body.getJsonArray("data");
                 context.put("memes", memes.getList());
+                context.put("title", "memes");
                 templateEngine.render(context.data(), "templates/memes.ftl", result -> {
                   if (result.succeeded()) {
                     context.response().putHeader("Content-Type", "text/html");
@@ -162,6 +165,7 @@ public class MainVerticle extends AbstractVerticle {
                 JsonObject data = body.getJsonObject("data");
                 JsonArray memes = data.getJsonArray("memes");
                 context.put("memes", memes.toString());
+                context.put("title", "create");
                 templateEngine.render(context.data(), "templates/add.ftl", result -> {
                   if (result.succeeded()) {
                     context.response().putHeader("Content-Type", "text/html");
@@ -182,6 +186,7 @@ public class MainVerticle extends AbstractVerticle {
 
     // tag::aboutHandler[]
     private void aboutHandler(RoutingContext context) {
+        context.put("title", "about");
         templateEngine.render(context.data(), "templates/about.ftl", result -> {
           if (result.succeeded()) {
             context.response().putHeader("Content-Type", "text/html");

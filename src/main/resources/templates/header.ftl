@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="/assets/css/aos.css">
 
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" />
 
   </head>
   <body>
@@ -50,36 +51,37 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2" data-aos="fade-down">
-            <h1 class="mb-0"><a href="/" class="text-black h2 mb-0">Meminc</a></h1>
+            <h1 class="mb-0 navbar-translate">
+                <a href="/" class="navbar-brand text-black h2 mb-0">
+                    <img width="70px" src="assets/images/favicon.png" alt="Image" class="img-fluid">Meminc
+                </a>
+            </h1>
           </div>
           <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="/">Home</a></li>
-                <li class=""><a href="/memes">Memes</a></li>
-                <#--  <li class="has-children">
-                  <a href="single.html">Memes</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Nature</a></li>
-                    <li><a href="#">Portrait</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Architecture</a></li>
-                    <li><a href="#">Animals</a></li>
-                    <li><a href="#">Sports</a></li>
-                    <li><a href="#">Travel</a></li>
-                    <li class="has-children">
-                      <a href="#">Sub Menu</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>  -->
-                <li><a href="about">About</a></li>
-                <#--  <li><a href="add">Add Meme</a></li>  -->
+                <#if title == "home">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/memes">memes</a></li>
+                    <li><a href="/about">about</a></li>
+                    <li><a href="/create">create</a></li>
+                <#elseif title == "memes">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><a href="/memes">Memes</a></li>
+                    <li><a href="/about">about</a></li>
+                    <li><a href="/create">create</a></li>
+                <#elseif title == "about">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/memes">Memes</a></li>
+                    <li class="active"><a href="/about">About</a></li>
+                    <li><a href="/create">create</a></li>
+                <#elseif title == "create">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/memes">Memes</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li class="active"><a href="/create">create</a></li>
+                </#if>
               </ul>
             </nav>
           </div>
@@ -88,16 +90,16 @@
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
                 <li>
-                  <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                  <a href="https://github.com/increDul0us" target="_blank" class="pl-0 pr-3"><span class="icon-github"></span></a>
                 </li>
                 <li>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                  <a href="https://twitter.com/incredulous___" target="_blank"  class="pl-3 pr-3"><span class="icon-twitter"></span></a>
                 </li>
                 <li>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                  <a href="https://instagram.com/incredulous___" target="_blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                 </li>
                 <li>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-youtube-play"></span></a>
+                  <a href="javascript:void" class="pl-3 pr-3"><span class="icon-youtube-play"></span></a>
                 </li>
               </ul>
             </div>
