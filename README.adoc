@@ -1,6 +1,6 @@
 = memeinc
 
-This project was developed with `JAVA(VERTX)` to generate memes based on requested url using the imgflip api.
+This project was developed with `JAVA(VERTX)` to generate memes based on requested url using the `imgflip` api.
 
 == Future Updates
 
