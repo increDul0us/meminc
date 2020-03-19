@@ -62,12 +62,16 @@ public class MainVerticle extends AbstractVerticle {
         router.post("/api/fetch").handler(this::fetchMemeHandler);
 
         templateEngine = FreeMarkerTemplateEngine.create(vertx);
+        int port;
+        if (System.getenv("PORT").isEmpty()){
+            port = 8080;
+        }  else port = Integer.parseInt(System.getenv("PORT"));
 
         server
         .requestHandler(router)
-        .listen(8080, ar -> {
+        .listen(port, ar -> {
             if (ar.succeeded()) {
-            System.out.println("HTTP server running on port 8080");
+            System.out.println("HTTP server running on port "+port);
             promise.complete();
             } else {
             System.out.println("Could not start a HTTP server: "+ ar.cause().getMessage());
