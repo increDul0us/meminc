@@ -65,7 +65,7 @@ public class MainVerticle extends AbstractVerticle {
         int port;
         if(System.getProperty("PORT") != null && !System.getProperty("PORT").isEmpty())
         port = Integer.parseInt(System.getProperty("PORT"));
-        else port = 8080;
+        else port = config().getInteger("http.port", 8080);
 
         server
         .requestHandler(router)
