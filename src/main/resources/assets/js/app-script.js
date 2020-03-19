@@ -40,6 +40,6 @@ $('#miminc_it').click(function (e) {
         $('#miminc_it').attr('disabled', false);
         $("#miminc_image").attr("src", data.url);
         $("#miminc_image").removeClass("d-none");
-        $("#miminc_image").wrap('<a href="' +data.url + '" download="memeinc-' +new Date() + '" target="_blank"/>')
+        $("#miminc_image").wrap('<a href="' +data.url + '" download="meminc-' +new Date() + '" target="_blank"/>')
     });
 });
