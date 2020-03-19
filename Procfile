@@ -1,1 +1,1 @@
-web: java -jar target/meme-gen-0.1-fat.jar
+web: java $JAVA_OPTS -Dhttp.port=$PORT -jar target/meme-gen-0.1-fat.jar
