@@ -2,7 +2,7 @@
 
 This project was developed with `JAVA(VERTX)` to generate memes based on requested url using the `imgflip` api.
 
-![Alt text](https://github.com/incredul0us/memeinc/raw/master/src/main/resources/assets/images/meminc.jpg?raw=true "Meminc image")
+![Alt text](https://github.com/incredul0us/memeinc/raw/master/src/main/resources/assets/images/meminc.jpg?raw=true)
 
 == Future Updates
 
