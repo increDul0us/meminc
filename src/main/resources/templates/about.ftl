@@ -32,7 +32,7 @@
             <div class="col-md-12 col-lg-12 col-xl-12 text-center mb-5">
               <img src="assets/images/profile.jpeg" alt="Image" class="img-fluid h-50 w-25 rounded-circle mb-4">
               <h2 class="text-black font-weight-light mb-4">Praise</h2>
-              <p class="mb-4">Fullstack web developer. <br/> Java(Vertx, Spring, Servlet and JSP), JS(Nodejs, Reactjs, Redux), Golang.</p>
+              <p class="mb-4">Fullstack web developer. <br/> Java(Vertx, Spring, Servlet), JS(Nodejs, Reactjs, Redux), Golang.</p>
               <p>
                 <a href="https://twitter.com/incredulous___" target="_blank" class="pl-0 pr-3"><span class="icon-twitter"></span></a>
                 <a href="https://instagram.com/incredulous___" target="_blank"  class="pl-3 pr-3"><span class="icon-instagram"></span></a>
