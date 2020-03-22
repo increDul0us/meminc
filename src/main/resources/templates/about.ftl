@@ -30,7 +30,7 @@
 
           <div class="row site-section">
             <div class="col-md-12 col-lg-12 col-xl-12 text-center mb-5">
-              <img src="assets/images/profile.jpeg" alt="Image" class="img-fluid h-50 w-25 rounded-circle mb-4">
+              <img width="150px" src="assets/images/profile.jpeg" alt="Image" class="rounded-circle z-depth-2 mb-4">
               <h2 class="text-black font-weight-light mb-4">Praise</h2>
               <p class="mb-4">Fullstack web developer. <br/> Java(Vertx, Spring, Servlet), JS(Nodejs, Reactjs, Redux), Golang.</p>
               <p>
